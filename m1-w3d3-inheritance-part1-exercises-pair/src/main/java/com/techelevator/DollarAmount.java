@@ -9,7 +9,11 @@ public class DollarAmount {
     public DollarAmount(int totalAmountInCents) {
         this.totalAmountInCents = totalAmountInCents;
     }
-    
+    public int getTotalAmountInCents() {
+    	
+    	return totalAmountInCents;
+    	
+    }
     public int getCents() {
         return (int)(totalAmountInCents % 100);
     }
@@ -55,6 +59,16 @@ public class DollarAmount {
             return 0;
         }
     }
+    
+    @Override
+    public String toString() {
+    	
+    	if (isNegative()) {
+    		return "-$" + getDollars() * -1 + "." + getCents() * -1;
+    	}
+    	return "$" + getDollars() + "." + getCents();
+    }
+    
     
     @Override
     public boolean equals(Object obj) {

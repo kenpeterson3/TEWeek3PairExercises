@@ -1,6 +1,6 @@
 package com.techelevator;
 
-public class BankAccount {
+public abstract class BankAccount {
 	
 	private String accountNumber;
 	private DollarAmount balance = new DollarAmount(0);
@@ -32,6 +32,8 @@ public class BankAccount {
 		destinationAccount.deposit(transferAmount);	
 		
 	}
+	
+	
 	
 	
 	
